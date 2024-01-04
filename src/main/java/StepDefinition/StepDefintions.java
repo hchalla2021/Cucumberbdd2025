@@ -1,5 +1,4 @@
 package StepDefinition;
-
 import PageObjects.SearchProductPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -7,17 +6,12 @@ import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
-
 public class StepDefintions {
-
     public WebDriver driver;
     public SearchProductPage searchprd;
-
     @Given("User launch amazon application using chrome browser")
     public void user_launch_amazon_application_using_chrome_browser() {
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         searchprd = new SearchProductPage(driver);
     }

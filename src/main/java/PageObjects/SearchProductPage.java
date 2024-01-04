@@ -1,10 +1,9 @@
 package PageObjects;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-public class SearchProductPage {
+public class SearchProductPage {//
     public WebDriver driver;
     public SearchProductPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -13,9 +12,6 @@ public class SearchProductPage {
     WebElement searchtext;
     @FindBy(xpath = "//*[@id=\"nav-search-submit-button\"]")
     WebElement searchbtn;
-
-    @FindBy(xpath = "//*[@id=\"nav-search-submit-button\"]")
-    WebElement clickiphone2023;
 
   public void Enterproduct(String prdtype) {
       searchtext.sendKeys(prdtype);
